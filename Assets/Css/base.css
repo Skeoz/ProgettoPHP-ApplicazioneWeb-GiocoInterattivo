@@ -1,0 +1,234 @@
+/* base.css - Stile Moderno, Pulito e Ottimizzato per il sito principale */
+
+/* === SEZIONE 1: IMPOSTAZIONI GENERALI E RESET === */
+/* Stile di base per tutto il documento */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0; padding: 0; line-height: 1.6;
+}
+/* Rimozione della sottolineatura dai link */
+a { text-decoration: none; }
+
+/* UTILITIES - Classi di supporto per margini, padding, flex, testo */
+.mt-0 { margin-top: 0; } .mt-10 { margin-top: 10px; } .mt-20 { margin-top: 20px; } .mt-30 { margin-top: 30px; } .mt-40 { margin-top: 40px; }
+.mb-10 { margin-bottom: 10px; } .mb-20 { margin-bottom: 20px; } .mb-30 { margin-bottom: 30px; } .mb-40 { margin-bottom: 40px; }
+.p-20 { padding: 20px; } .p-30 { padding: 30px; }
+.w-100 { width: 100%; } .w-auto { width: auto; } .m-0 { margin: 0; }
+/* Flexbox utilities */
+.d-flex { display: flex; } .flex-wrap { flex-wrap: wrap; } 
+.justify-between { justify-content: space-between; } .justify-center { justify-content: center; } .align-center { align-items: center; }
+.gap-10 { gap: 10px; } .gap-15 { gap: 15px; } .gap-20 { gap: 20px; }
+/* Text utilities */
+.text-center { text-align: center; } .text-muted { color: #666; } 
+.text-dark-h1 { margin: 0; color: #333; font-weight: 800; } 
+.text-muted-sub { margin: 5px 0 0 0; color: #666; }
+.font-bold { font-weight: bold; }
+
+/* === SEZIONE 2: BARRA DI NAVIGAZIONE === */
+/* Navbar principale: fissa, scura con shadow */
+.main-nav { background-color: #212529; padding: 10px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+/* Contenitore della navbar con allineamento flex */
+.nav-container { max-width: 1100px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+/* Logo del sito: stile arcade con transizione hover */
+.nav-logo { color: #fff; font-family: 'Press Start 2P', cursive; font-size: 1.2rem; transition: color 0.2s; }
+.nav-logo:hover { color: #33ff33; }
+/* Sezione destra della navbar */
+.nav-right { display: flex; align-items: center; gap: 15px; }
+/* Link profilo utente */
+.user-link { color: #e0e0e0; font-weight: 500; display: flex; align-items: center; gap: 8px; padding: 5px 10px; border-radius: 5px; transition: background 0.2s; }
+.user-link:hover { background: rgba(255,255,255,0.1); color: white; }
+/* Bottone di logout con icona */
+.btn-logout { color: #dc3545; font-size: 1.2rem; padding: 5px; border-radius: 50%; transition: all 0.2s; display: flex; align-items: center; justify-content: center; }
+.btn-logout:hover { background: rgba(220, 53, 69, 0.2); transform: scale(1.1); }
+/* Bottone di login nella navbar */
+.btn-login-nav { background-color: #007bff; color: white; padding: 6px 15px; border-radius: 20px; font-size: 0.9em; font-weight: bold; }
+.btn-login-nav:hover { background-color: #0056b3; }
+
+/* === SEZIONE 3: HERO SECTION === */
+/* Sezione hero principale con gradiente e shadow */
+.hero-section { background: linear-gradient(135deg, #6f42c1 0%, #007bff 100%); color: white; padding: 80px 20px; text-align: center; margin-bottom: 40px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; box-shadow: 0 10px 20px rgba(0, 123, 255, 0.2); }
+/* Varianti di hero con diversi padding */
+.hero-md { padding: 50px 20px; margin-bottom: 30px; } .hero-sm { padding: 40px 20px; margin-bottom: 20px; }
+/* Titolo hero: stile arcade grande */
+.hero-section h1 { font-family: 'Press Start 2P', cursive; font-size: 2.5rem; margin-bottom: 20px; text-shadow: 3px 3px 0px rgba(0,0,0,0.2); line-height: 1.4; }
+/* Paragrafo della descrizione */
+.hero-section p { font-size: 1.2rem; max-width: 600px; margin: 0 auto 30px auto; opacity: 0.9; }
+/* Bottone hero principale per call-to-action */
+.btn-hero { background-color: #28a745; color: white; padding: 15px 40px; font-size: 1.2rem; border-radius: 50px; font-weight: bold; box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4); transition: transform 0.2s, box-shadow 0.2s; display: inline-block; }
+.btn-hero:hover { transform: scale(1.05); box-shadow: 0 8px 20px rgba(40, 167, 69, 0.6); background-color: #218838; }
+
+/* === SEZIONE 4: CARDS E LAYOUT === */
+/* Contenitori principali del sito */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.container-narrow { max-width: 800px; }
+/* Griglia di feature card sulla home */
+.features-grid { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-bottom: 50px; }
+
+/* Card della feature: stile moderno con shadow e hover effect */
+.feature-card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); width: 280px; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; border-top: 5px solid transparent; }
+.feature-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+
+/* Colori dei bordi superiori delle card */
+.card-rank { border-top-color: #ffc107; } .card-profile { border-top-color: #007bff; } .card-code { border-top-color: #dc3545; }
+/* Panel card: simile a feature-card ma full width */
+.card-panel { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+.card-full { width: 100%; text-align: left; padding: 20px; }
+
+/* Colori alternativi per card */
+.card-orange { border-top: 4px solid #e34f26; } .card-purple { border-top: 4px solid #777bb4; } .card-teal { border-top: 4px solid #00758f; }
+.stat-card-green { border-top: 4px solid #28a745; } .stat-card-blue { border-top: 4px solid #007bff; }
+
+/* Icone e titoli delle card */
+.feature-icon { font-size: 3rem; margin-bottom: 15px; display: block; } .icon-lg { font-size: 1.5em; }
+.feature-card h3, .card-panel h3 { margin-bottom: 10px; color: #333; }
+.feature-card p, .card-panel p { color: #666; font-size: 0.9em; margin-bottom: 20px; }
+
+/* === SEZIONE 5: BOTTONI E ELEMENTI UI === */
+/* Bottone piccolo con hover effect */
+.btn-small { padding: 8px 20px; border-radius: 20px; font-size: 0.9em; font-weight: bold; color: white; background: #555; transition: background 0.2s; display: inline-block; }
+.btn-small:hover { background: #333; }
+/* Varianti colore per bottoni piccoli */
+.btn-yellow { background: #ffc107; color: #333; } .btn-blue { background: #007bff; } .btn-red { background: #ce1717ff; color: white; } 
+/* Bottone admin */
+.btn-admin { background: #6f42c1; color: white; border: none; }
+
+/* === SEZIONE 6: TABELLE CON STILE COLORATO === */
+/* Tabella principale con gradiente nell'header */
+table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 25px rgba(111, 66, 193, 0.15); border: none; }
+/* Header della tabella con gradiente */
+th { background: linear-gradient(135deg, #6f42c1 0%, #007bff 100%); color: white; padding: 20px 15px; text-align: left; text-transform: uppercase; font-size: 0.9em; letter-spacing: 1px; border: none; font-weight: 800; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); }
+/* Celle della tabella */
+td { padding: 18px 15px; color: #444; font-weight: 500; vertical-align: middle; border-bottom: 1px solid #eef2f7; }
+/* Ultima riga senza bordo inferiore */
+tr:last-child td { border-bottom: none; }
+/* Righe alternate con colore di sfondo */
+tr:nth-child(even) { background-color: #f4f8fb; }
+/* Hover effect sulle righe */
+tr:hover { background-color: #e6f0ff; transition: background 0.2s; cursor: default; }
+/* Classe per righe bannate */
+.bg-danger-light { background-color: #fff0f0 !important; }
+
+/* Badge di stato */
+.status-badge { display: inline-flex; align-items: center; padding: 8px 15px; border-radius: 50px; font-size: 0.85em; font-weight: bold; margin: 0; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+.status-ok { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+.status-err { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+
+/* === SEZIONE 7: FORM E AUTENTICAZIONE === */
+/* Input text: stile moderno con focus effect */
+input { width: 100%; padding: 12px; margin: 8px 0; border: 2px solid #eee; border-radius: 8px; font-size: 1em; transition: border 0.3s; background: #fafafa; box-sizing: border-box; }
+input:focus { border-color: #007bff; outline: none; background: white; }
+/* Etichetta form */
+.form-label { text-align: left; font-weight: bold; font-size: 0.9em; color: #555; }
+/* Contenitore della pagina di autenticazione */
+.auth-container { max-width: 400px; margin: 60px auto; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); text-align: center; }
+.auth-container h2 { margin-top: 0; color: #333; margin-bottom: 20px; }
+/* Bottone primario e bottone successo */
+.btn-primary, .btn-success { color: white; padding: 12px; width: 100%; border: none; border-radius: 8px; font-size: 1rem; font-weight: bold; cursor: pointer; margin-top: 15px; transition: background 0.2s; display: inline-block; text-align: center; }
+.btn-primary { background-color: #007bff; } .btn-primary:hover { background-color: #0056b3; }
+.btn-success { background-color: #28a745; } .btn-success:hover { background-color: #218838; }
+/* Link per navigare tra login e registrazione */
+.auth-link { display: block; margin-top: 20px; color: #666; font-size: 0.9em; } .auth-link:hover { color: #007bff; }
+/* Alert di errore */
+.alert-error { background: #f8d7da; color: #721c24; padding: 10px; border-radius: 5px; margin-bottom: 15px; font-size: 0.9em; }
+/* Alert di successo */
+.alert-success { background: #d4edda; color: #155724; padding: 10px; border-radius: 5px; margin-bottom: 15px; font-size: 0.9em; }
+
+/* === SEZIONE 8: MEDAGLIE SBLOCCATE === */
+/* Card singola medaglia */
+.medal-card {
+    background: white; border: 1px solid #eee; border-radius: 15px;
+    padding: 20px; text-align: center; width: 150px; min-height: 160px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    cursor: default; display: flex; flex-direction: column; justify-content: center; align-items: center;
+}
+.medal-card:hover { 
+    transform: translateY(-10px); 
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1); 
+    border-color: #eee; 
+}
+/* Icona della medaglia */
+.medal-icon { font-size: 4em; margin-bottom: 15px; line-height: 1; }
+/* Nome della medaglia */
+.medal-name { font-weight: 800; font-size: 1.1em; color: #333; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; }
+/* Descrizione della medaglia */
+.medal-desc { font-size: 0.8em; color: #777; background: #f1f3f5; padding: 5px 10px; border-radius: 20px; font-weight: 500; }
+/* Wrapper del contenitore medaglie */
+.medals-wrapper { margin-bottom: 40px; }
+/* Griglia medaglie */
+.medals-grid { display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; }
+/* Messaggio quando non ci sono medaglie */
+.medals-empty { background: #f8f9fa; padding: 20px; border-radius: 8px; color: #666; text-align: center; border: 1px dashed #ccc; }
+/* Colori dei bordi per tipo medaglia */
+.border-bronze { border-top: 4px solid #cd7f32; } .border-silver { border-top: 4px solid #c0c0c0; } .border-gold { border-top: 4px solid #ffd700; } .border-diamond { border-top: 4px solid #00ffff; }
+
+/* === SEZIONE 9: ELEMENTI DEL PROFILO === */
+/* Bottone blocco grande */
+.btn-block-lg {
+    display: block; width: 100%; padding: 15px;
+    border-radius: 10px; font-size: 1.1em; font-weight: bold;
+    text-align: center; transition: transform 0.2s, box-shadow 0.2s;
+    border: none; cursor: pointer;
+}
+.btn-block-lg:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+
+/* Separatore per la sezione di pericolo (eliminazione account) */
+.danger-separator { border-top: 1px solid #eee; padding-top: 20px; margin-top: 20px; display: flex; justify-content: space-between; align-items: center; }
+
+/* === SEZIONE 10: BADGE DI RANKING E ADMIN === */
+/* Badge per il ranking (1°, 2°, 3°, etc) */
+.rank-badge { display: inline-flex; justify-content: center; align-items: center; width: 32px; height: 32px; border-radius: 50%; font-weight: bold; font-size: 0.9em; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.rank-1 { background-color: #ffd700; color: #000; border: 2px solid #fff; } .rank-2 { background-color: #c0c0c0; color: #000; border: 2px solid #fff; } .rank-3 { background-color: #cd7f32; color: #fff; border: 2px solid #fff; } .rank-other { background-color: #e9ecef; color: #6c757d; font-size: 0.8em; }
+/* Nome del giocatore */
+.player-name { font-weight: 600; color: #333; }
+/* Valore del punteggio */
+.score-val { color: #28a745; font-weight: bold; font-size: 1.1em; } 
+/* Valore della data */
+.date-val { color: #999; font-size: 0.85em; }
+/* Status admin */
+.status-admin { background-color: #6f42c1; color: white; border: 1px solid #5a32a3; }
+/* Riga bannata */
+.row-banned { background-color: #fff5f5; }
+/* Testo per se stessi nella lista */
+.text-self { color: #ccc; font-size: 0.9em; font-style: italic; }
+
+/* Bottone outline rosso */
+.btn-outline-red { display: inline-flex; align-items: center; justify-content: center; color: #dc3545; border: 1px solid #dc3545; background: white; padding: 6px 12px; border-radius: 20px; font-weight: bold; font-size: 0.85em; transition: all 0.2s; cursor: pointer; }
+.btn-outline-red:hover { background: #dc3545; color: white; }
+/* Bottone outline verde */
+.btn-outline-green { display: inline-flex; align-items: center; justify-content: center; color: #28a745; border: 1px solid #28a745; background: white; padding: 6px 12px; border-radius: 20px; font-weight: bold; font-size: 0.85em; transition: all 0.2s; cursor: pointer; }
+.btn-outline-green:hover { background: #28a745; color: white; }
+
+/* === SEZIONE 11: FOOTER E STRUTTURA PAGINA === */
+/* Stile principale del footer: full-width con spaziatura verticale */
+footer { margin-top: 50px; padding: 20px 0; color: #666; font-size: 0.8em; border-top: 1px solid #ddd; }
+/* Contenitore interno del footer per centrare il contenuto */
+footer .container { text-align: center; }
+/* Contenitore del footer con bordo superiore */
+.back-footer { margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; text-align: center; }
+.btn-back:hover { background-color: #e9ecef; color: #212529; transform: translateX(-5px); }
+
+/* === SEZIONE 12: SEZIONI E LISTE SPECIALI === */
+/* Layout per la pagina about: contenuto principale e sidebar */
+.about-main { flex: 2; } .about-side { flex: 1; }
+/* Titolo di sezione con sottolineatura */
+.section-title { color: #333; border-bottom: 2px solid #f1f1f1; padding-bottom: 10px; margin-top: 0; }
+/* Lista degli sviluppatori */
+.dev-list { list-style: none; padding: 0; margin-top: 20px; font-size: 1.1em; color: #555; }
+/* Elemento della lista sviluppatori */
+.dev-item { margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+/* Badge per iniziali nomi */
+.badge-initials { padding: 5px 10px; border-radius: 5px; font-weight: bold; font-size: 0.8em; }
+.badge-gray { background: #e9ecef; color: #495057; } .badge-blue { background: #e3f2fd; color: #0d47a1; }
+
+/* === MEDIA QUERY: RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+    /* Hero section su mobile con font più piccolo */
+    .hero-section h1 { font-size: 1.8rem; }
+    /* Feature grid su mobile: layout verticale */
+    .features-grid { flex-direction: column; align-items: center; }
+    /* Card full width su mobile */
+    .feature-card { width: 100%; max-width: 350px; }
+}
